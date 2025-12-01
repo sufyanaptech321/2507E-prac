@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="heading">Welcome to SnackStop!</h1>
+<p class="info">Fresh burgers every day.</p>
+<p class="info">Try our new spicy fries!</p>
+<button id="btn">Click Me</button>
+
+<script>
+
+  const title = document.getElementById("heading");
+  title.innerHTML = "<b><i>Welcome to BurgerHub!</i></b>";
+ 
+
+
+  const info = document.getElementsByClassName("info");
+  console.log(info[0].textContent);
+
+
+  // const firstInfo = document.querySelector(".info");
+  // const allInfo = document.querySelectorAll(".info");
+
+  // console.log(firstInfo.textContent);
+  // console.log(allInfo.length);
+</script>
+
+</body>
+</html>

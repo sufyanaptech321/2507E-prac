@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Element with onclick</title>
+</head>
+<body>
+
+  <h2>Click the button to add a new paragraph!</h2>
+
+  <button onclick="addParagraph()">Add Paragraph</button>
+
+  <div id="container"></div>
+
+  <script>
+    function addParagraph() {
+      const newParagraph = document.createElement('p');
+      newParagraph.textContent = 'This is a new paragraph added dynamically!';
+      document.getElementById('container').appendChild(newParagraph);
+    }
+  </script>
+
+</body>
+</html>

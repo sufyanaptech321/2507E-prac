@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comments Section</title>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    .comment-box { margin-bottom: 10px; }
+    .comment { background: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <h2>Post: My First Blog </h2>
+  <div id="comments">
+    <div class="comment">This is the first comment!</div>
+  </div>
+
+  <input type="text" id="newComment" placeholder="Write a comment..." class="comment-box">
+  <button onclick="addComment()">Add Comment</button>
+
+  <script>
+    function addComment() {
+      let commentText = document.getElementById("newComment").value;
+      if (commentText === "") return alert("Please write something!");
+      let newDiv = document.createElement("div");
+      newDiv.className = "comment";
+      newDiv.textContent = commentText;
+      document.getElementById("comments").appendChild(newDiv);
+
+     
+    //   let firstComment = document.querySelector(".comment");
+    //   let label = document.createElement("div");
+    //   label.innerHTML = "<b>🆕 New Comment Added:</b>";
+    //   document.getElementById("comments").insertBefore(label, firstComment);
+
+
+    //   document.body.innerHTML += "<p>✅ Thanks for commenting!</p>";
+
+    //   document.getElementById("newComment").value = "";
+    }
+  </script>
+
+</body>
+</html>
